@@ -21,6 +21,7 @@ package ryey.easer.plugins.operation.command;
 
 import android.app.Activity;
 import android.content.Context;
+import android.os.Build;
 import android.support.annotation.NonNull;
 
 import ryey.easer.R;
@@ -30,6 +31,7 @@ import ryey.easer.commons.local_plugin.operationplugin.OperationPlugin;
 import ryey.easer.commons.local_plugin.operationplugin.PrivilegeUsage;
 import ryey.easer.plugin.operation.Category;
 import ryey.easer.plugins.operation.OperationLoader;
+import ryey.easer.plugins.reusable.PluginHelper;
 
 public class CommandOperationPlugin implements OperationPlugin<CommandOperationData> {
 
@@ -68,12 +70,18 @@ public class CommandOperationPlugin implements OperationPlugin<CommandOperationD
 
     @Override
     public boolean checkPermissions(@NonNull Context context) {
-        return true;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            return PluginHelper.checkPermission(context, "com.termux.permission.TERMUX_SERVICE");
+        } else {
+            return true;
+        }
     }
 
     @Override
     public void requestPermissions(@NonNull Activity activity, int requestCode) {
-
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            PluginHelper.requestPermission(activity, requestCode, "com.termux.permission.TERMUX_SERVICE");
+        }
     }
 
     @NonNull
