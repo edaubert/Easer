@@ -89,6 +89,7 @@ import ryey.easer.plugins.operation.send_notification.SendNotificationOperationP
 import ryey.easer.plugins.operation.send_sms.SendSmsOperationPlugin;
 import ryey.easer.plugins.operation.state_control.StateControlOperationPlugin;
 import ryey.easer.plugins.operation.synchronization.SynchronizationOperationPlugin;
+import ryey.easer.plugins.operation.termux.TermuxOperationPlugin;
 import ryey.easer.plugins.operation.ui_mode.UiModeOperationPlugin;
 import ryey.easer.plugins.operation.volume.VolumeOperationPlugin;
 import ryey.easer.plugins.operation.wifi.WifiOperationPlugin;
@@ -163,6 +164,11 @@ final public class LocalPluginRegistry {
         operation().registerPlugin(LaunchAppOperationPlugin.class);
         operation().registerPlugin(UiModeOperationPlugin.class);
         //TODO: write more plugins
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT) {
+//            TODO define it as external plugin ? or check if termux is installed
+            operation().registerPlugin(TermuxOperationPlugin.class);
+
+        }
     }
 
     private static final LocalPluginRegistry instance = new LocalPluginRegistry();
