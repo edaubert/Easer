@@ -26,9 +26,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.DatePicker;
+import android.widget.LinearLayout;
 
 import java.util.Calendar;
 
+import ryey.easer.R;
 import ryey.easer.commons.local_plugin.InvalidDataInputException;
 import ryey.easer.commons.local_plugin.ValidData;
 import ryey.easer.plugins.PluginViewFragment;
@@ -39,8 +41,14 @@ public class DatePluginViewFragment extends PluginViewFragment<DateEventData> {
     @NonNull
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        datePicker = new DatePicker(getContext());
-        return datePicker;
+//        datePicker = new DatePicker(getContext());
+//        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+//        layoutParams.setMargins(100, 100, 100, 100);
+//        datePicker.setLayoutParams(layoutParams);
+//        return datePicker;
+        View view = inflater.inflate(R.layout.plugin_event__date, container, false);
+        datePicker = view.findViewById(R.id.date_picker);
+        return view;
     }
 
     private static Calendar fromDatePicker(DatePicker datePicker) {
