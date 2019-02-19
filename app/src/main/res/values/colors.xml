@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
-    <color name="colorAlert">#FE221C</color>
-    <color name="colorDivider">@android:color/darker_gray</color>
-    <color name="colorSegment">#CAD0E2</color>
+    <color name="colorPrimary">#155898</color>
+    <color name="colorPrimaryDark">#1A237E</color>
+    <color name="colorAccent">#5C6BC0</color>
+    <color name="colorAlert">#2196F3</color>
+    <color name="colorDivider">#C5CAE9</color>
+    <color name="colorSegment">#9FA8DA</color>
 
     <color name="colorDialogTitle">@color/colorAccent</color>
     <color name="colorText">@android:color/black</color>
@@ -16,8 +16,8 @@
     <color name="listHeaderBackground">@color/colorPrimaryDark</color>
     <color name="listHeaderText">@color/colorTextInverse</color>
 
-    <color name="color_positive">#0CF440</color>
-    <color name="color_negative">#F22754</color>
+    <color name="color_positive">#15945C</color>
+    <color name="color_negative">#880E4F</color>
 
     <color name="transparent">@android:color/transparent</color>
 </resources>
