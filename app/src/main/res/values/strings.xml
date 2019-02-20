@@ -58,8 +58,8 @@
     <string name="button_cancel">Cancel</string>
     <string name="button_ok">OK</string>
 
-    <string name="text_lack_permission">Easer does NOT have all permissions it needs.</string>
-    <string name="button_request_permission">Grant permissions</string>
+    <string name="text_lack_permission">Easer plugins do NOT have all permissions they needs.</string>
+    <string name="button_request_permission">Check permissions</string>
 
     <string name="text_notification_running_indicator_content">%s is running in the background</string>
 

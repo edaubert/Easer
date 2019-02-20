@@ -19,6 +19,7 @@
 
 package ryey.easer.core.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -35,6 +36,7 @@ import java.util.List;
 import ryey.easer.R;
 import ryey.easer.SettingsHelper;
 import ryey.easer.commons.local_plugin.PluginDef;
+import ryey.easer.permissions.PermissionActivity;
 import ryey.easer.plugins.LocalPluginRegistry;
 
 public class PermissionOutlineFragment extends Fragment {
@@ -42,11 +44,6 @@ public class PermissionOutlineFragment extends Fragment {
     Button mButton;
 
     public PermissionOutlineFragment() {
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
 
     @Override
@@ -66,7 +63,8 @@ public class PermissionOutlineFragment extends Fragment {
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                requestAllPermissions();
+                Intent intent = new Intent(getContext(), PermissionActivity.class);
+                startActivity(intent);
             }
         });
     }
@@ -94,14 +92,5 @@ public class PermissionOutlineFragment extends Fragment {
             }
         }
         return satisfied;
-    }
-
-    void requestAllPermissions() {
-        List plugins = LocalPluginRegistry.getInstance().all().getEnabledPlugins(getContext());
-        for (int i = 0; i < plugins.size(); i++) {
-            PluginDef plugin = (PluginDef) plugins.get(i);
-            if (!plugin.checkPermissions(getContext()))
-                plugin.requestPermissions(getActivity(), i);
-        }
     }
 }
