@@ -30,6 +30,9 @@
                 android:id="@+id/nav_setting"
                 android:title="@string/title_setting" />
             <item
+                android:id="@+id/nav_permissions"
+                android:title="@string/title_permissions" />
+            <item
                 android:id="@+id/nav_about"
                 android:title="@string/title_about" />
         </menu>

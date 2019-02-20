@@ -13,6 +13,7 @@
     <string name="title_activity_history">Activity History</string>
     <string name="title_about">About</string>
     <string name="title_setting">Settings</string>
+    <string name="title_permissions">Permissions</string>
     <string name="title_add">Add</string>
     <string name="title_edit">Edit</string>
     <string name="title_delete">Delete</string>
@@ -197,5 +198,10 @@ Reminder: Easer is still in development. It may contain bugs and the UI definite
     <string name="category_operation_easer">@string/easer</string>
     <string name="category_operation_misc">Misc</string>
     <string name="category_operation_unknown">Unknown</string>
+
+    <string name="plugin_permission_action">Grant permissions</string>
+    <string name="plugin_permission_status_contentdescription_ok">Permissions granted</string>
+    <string name="plugin_permission_status_contentdescription_ko">Permissions not granted</string>
+
 
 </resources>

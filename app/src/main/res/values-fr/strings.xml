@@ -12,6 +12,7 @@
     <string name="title_activity_history">Journal d\'activité</string>
     <string name="title_about">A propos</string>
     <string name="title_setting">Paramètres</string>
+    <string name="title_permissions">Permissions</string>
     <string name="title_add">Ajouter</string>
     <string name="title_edit">Modifier</string>
     <string name="title_delete">Supprimer</string>
@@ -202,5 +203,10 @@
     <string name="pref_foreground_summary">Rend le service moins facile d\'être tué par le système. Affiche une notification. Ne peut pas être désactivé sur Android 8+ en raison des exigences du système.</string>
 
     <string name="menu_tree_list">Arborescence</string>
+
+
+    <string name="plugin_permission_action">Donner les permissions</string>
+    <string name="plugin_permission_status_contentdescription_ok">Permissions données</string>
+    <string name="plugin_permission_status_contentdescription_ko">Permissions non données</string>
 
     </resources>

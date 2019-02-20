@@ -40,6 +40,7 @@ import android.text.method.LinkMovementMethod;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import ryey.easer.permissions.PermissionActivity;
 import ryey.easer.R;
 import ryey.easer.core.data.storage.StorageHelper;
 import ryey.easer.core.ui.data.ConditionListFragment;
@@ -201,6 +202,9 @@ public class MainActivity extends AppCompatActivity
             startActivity(intent);
         } else if (id == R.id.nav_setting) {
             Intent intent = new Intent(this, SettingsActivity.class);
+            startActivity(intent);
+        } else if (id == R.id.nav_permissions) {
+            Intent intent = new Intent(this, PermissionActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_log) {
             fragment = manager.findFragmentByTag(tag);
